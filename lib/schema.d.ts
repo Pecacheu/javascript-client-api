@@ -1066,6 +1066,8 @@ export interface components {
             server_id?: string | null;
             /** @description Id of the object this file is associated with */
             object_id?: string | null;
+            /** @description Key's channel id, if encrypted */
+            e2e_id?: string | null;
         };
         /** @description Metadata associated with a file */
         Metadata: {

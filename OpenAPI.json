@@ -8652,6 +8652,11 @@
             "description": "Id of the object this file is associated with",
             "type": "string",
             "nullable": true
+          },
+          "e2e_id": {
+            "description": "Key's channel id, if encrypted",
+            "type": "string",
+            "nullable": true
           }
         }
       },
