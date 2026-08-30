@@ -9225,6 +9225,10 @@
               "nsfw": {
                 "description": "Whether this group is marked as not safe for work",
                 "type": "boolean"
+              },
+              "e2e": {
+                "description": "Whether this group is end-to-end encrypted",
+                "type": "boolean"
               }
             }
           },
@@ -9310,6 +9314,10 @@
                 "format": "uint64",
                 "minimum": 0.0,
                 "nullable": true
+              },
+              "e2e": {
+                "description": "Whether this channel is end-to-end encrypted",
+                "type": "boolean"
               }
             }
           }
@@ -9827,6 +9835,11 @@
             "items": {
               "$ref": "#/components/schemas/FieldsChannel"
             }
+          },
+          "e2e": {
+            "description": "Whether this channel is end-to-end encrypted",
+            "type": "boolean",
+            "nullable": true
           }
         }
       },
@@ -11391,6 +11404,11 @@
             "description": "Whether this group is age-restricted",
             "type": "boolean",
             "nullable": true
+          },
+          "e2e": {
+            "description": "Whether this group is end-to-end encrypted",
+            "type": "boolean",
+            "nullable": true
           }
         }
       },
@@ -12092,6 +12110,11 @@
                 "$ref": "#/components/schemas/VoiceInformation"
               }
             ],
+            "nullable": true
+          },
+          "e2e": {
+            "description": "Whether this channel is end-to-end encrypted",
+            "type": "boolean",
             "nullable": true
           }
         }
@@ -13296,6 +13319,10 @@
             "type": "integer",
             "format": "uint64",
             "minimum": 0.0,
+            "nullable": true
+          },
+          "e2e": {
+            "type": "boolean",
             "nullable": true
           }
         }

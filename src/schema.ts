@@ -1346,6 +1346,8 @@ export interface components {
           permissions?: number | null;
           /** @description Whether this group is marked as not safe for work */
           nsfw?: boolean;
+          /** @description Whether this group is end-to-end encrypted */
+          e2e?: boolean;
         }
       | {
           /** @enum {string} */
@@ -1377,6 +1379,8 @@ export interface components {
            * @description The channel's slowmode delay in seconds
            */
           slowmode?: number | null;
+          /** @description Whether this channel is end-to-end encrypted */
+          e2e?: boolean;
         };
     /** @description Representation of a single permission override as it appears on models and in the database */
     OverrideField: {
@@ -1589,6 +1593,8 @@ export interface components {
        * @default []
        */
       remove?: components["schemas"]["FieldsChannel"][];
+      /** @description Whether this channel is end-to-end encrypted */
+      e2e?: boolean | null;
     };
     /**
      * @description Optional fields on channel object
@@ -2125,6 +2131,8 @@ export interface components {
       users?: string[];
       /** @description Whether this group is age-restricted */
       nsfw?: boolean | null;
+      /** @description Whether this group is end-to-end encrypted */
+      e2e?: boolean | null;
     };
     /** @description Voice server token response */
     CreateVoiceUserResponse: {
@@ -2419,6 +2427,8 @@ export interface components {
       nsfw?: boolean | null;
       /** @description Voice Information for when this channel is also a voice channel */
       voice?: components["schemas"]["VoiceInformation"] | null;
+      /** @description Whether this channel is end-to-end encrypted */
+      e2e?: boolean | null;
     };
     /** @description Server Channel Type */
     LegacyServerChannelType: "Text" | "Voice";
@@ -2804,6 +2814,7 @@ export interface components {
       voice?: components["schemas"]["VoiceInformation"] | null;
       /** Format: uint64 */
       slowmode?: number | null;
+      e2e?: boolean | null;
     };
     PartialMember: {
       id?: components["schemas"]["MemberCompositeKey"] | null;
